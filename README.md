@@ -2,10 +2,28 @@
 
 ---
 
+Meraki local script development utility
 
-meraki script development cli
+## Installation
 
-## Setup
+To install `meraki-cli`, run `npm install`:
+
+```bash
+npm install meraki-cli
+```
+
+## Usage
+
+To run Meraki script checks for a file, run:
+
+```bash
+./node_modules/.bin/meraki-cli check /path/to/my/Script.js
+```
+
+
+## Development
+
+### Setup
 
 ```bash
 npm install
@@ -13,7 +31,7 @@ npm install
 npm run dev
 ```
 
-## Testing
+### Testing
 
 `meraki-cli` uses Jest for unit tests.  To run the test suite:
 
