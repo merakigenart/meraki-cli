@@ -119,9 +119,9 @@ class Builder {
 
         this.writeln((this.config.verbose ? `* D` : `d`) + `one. (${finishedTs - startedTs} ms)`);
 
-        if (this.config.production) {
-            this.convertToProductionFile();
-        }
+        // if (this.config.production) {
+        //     this.convertToProductionFile();
+        // }
     }
 }
 

@@ -1,0 +1,17 @@
+#!/bin/bash
+
+THISDIR=$(dirname $0)
+NODE=$(which node)
+
+if [ -f "$THISDIR/../meraki-cli/dist/index.js" ]; then
+    $NODE "$THISDIR/../meraki-cli/dist/index.js" $*
+    exit $?
+fi
+
+if [ -f "$THISDIR/../dist/index.js" ]; then
+    $NODE "$THISDIR/../dist/index.js" $*
+    exit $?
+fi
+
+echo "Error: meraki-cli script not found"
+exit 1

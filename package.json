@@ -1,7 +1,21 @@
 {
     "name": "meraki-cli",
-    "version": "1.0.0",
-    "description": "meraki script development cli",
+    "version": "0.0.1",
+    "author": "Patrick Organ <patrick@permafrost.dev>",
+    "license": "MIT",
+    "description": "Meraki script development cli",
+    "homepage": "https://github.com/merakigenart/meraki-cli",
+    "keywords": [
+        "meraki",
+        "cli"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/merakigenart/meraki-cli.git"
+    },
+    "bugs": {
+        "url": "https://github.com/merakigenart/meraki-cli/issues"
+    },
     "main": "dist/index.js",
     "scripts": {
         "test": "./node_modules/.bin/jest tests --verbose",
@@ -14,10 +28,10 @@
         "build:dev": "./node_modules/.bin/esbuild --platform=node --target=node16 --define:__APP_VERSION__=\"'1.0'\" --format=cjs --bundle --outdir=dist src/index.ts",
         "build:prod": "node ./scripts/build.js --production",
         "dev": "npm run build:dev && node dist/index.js",
-        "prepare": "husky install"
+        "prepare": "husky install",
+        "preversion": "npm run test",
+        "postversion": "npm run build:prod"
     },
-    "author": "Patrick Organ <patrick@permafrost.dev>",
-    "license": "MIT",
     "lint-staged": {
         "*.{js,ts}": [
             "./node_modules/.bin/prettier --config prettier.config.js --write",
@@ -31,6 +45,7 @@
         ]
     },
     "devDependencies": {
+        "@tinyhttp/app": "^2.0.15",
         "@types/jest": "^27.4.0",
         "@types/node": "^16.11.19",
         "@typescript-eslint/eslint-plugin": "^5.9.1",
@@ -45,7 +60,16 @@
         "typescript": "^4.5"
     },
     "dependencies": {
+        "axios": "^0.24.0",
+        "chalk": "^5.0.0",
+        "commander": "^8.3.0",
         "conf": "^10.1.1",
         "js-yaml": "^4.1.0"
+    },
+    "bin": {
+        "meraki-cli": "bin/meraki-cli"
+    },
+    "engines": {
+        "node": ">=14.0.0"
     }
 }
