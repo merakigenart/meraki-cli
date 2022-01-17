@@ -1,6 +1,8 @@
-# meraki-cli
+<p align="center">
+    <img style="width: 400px;" src="https://user-images.githubusercontent.com/5508707/149785606-961dba2b-1c08-4848-9d5c-0e3e089da04a.png" alt="" />
+</p>
 
----
+# meraki-cli
 
 Meraki local script development utility
 
@@ -9,7 +11,7 @@ Meraki local script development utility
 To install `meraki-cli`, run `npm install`:
 
 ```bash
-npm install meraki-cli
+npm install meraki-cli --save-dev
 ```
 
 ## Usage
@@ -19,6 +21,9 @@ To run Meraki script checks for a file, run:
 ```bash
 ./node_modules/.bin/meraki-cli check /path/to/my/Script.js
 ```
+You will see output similar to the following:
+
+![image](https://user-images.githubusercontent.com/5508707/149785418-49c981f2-060e-4dcd-a0d5-296e9e3a81ca.png)
 
 
 ## Development
