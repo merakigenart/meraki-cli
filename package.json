@@ -1,6 +1,6 @@
 {
     "name": "meraki-cli",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "author": "Patrick Organ <patrick@permafrost.dev>",
     "license": "MIT",
     "description": "Meraki script development cli",
