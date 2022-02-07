@@ -26,6 +26,16 @@ You will see output similar to the following:
 ![image](https://user-images.githubusercontent.com/5508707/149785418-49c981f2-060e-4dcd-a0d5-296e9e3a81ca.png)
 
 
+### Checking for updates
+
+You may check for updates to `meraki-cli` by running:
+
+```bash
+./node_modules/.bin/meraki-cli update-check
+```
+
+_Note: update checks are automatically run on a regular basis as well._
+
 ## Development
 
 ### Setup
