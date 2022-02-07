@@ -2,9 +2,11 @@
     <img style="width: 400px;" src="https://user-images.githubusercontent.com/5508707/149785606-961dba2b-1c08-4848-9d5c-0e3e089da04a.png" alt="" />
 </p>
 
-# meraki-cli
+# Meraki Script Development CLI
 
-Meraki local script development utility
+This package provides a command-line utility for validating scripts developed for [Meraki](https://mraki.io).
+
+Using this tool will increase the likelihood that your submitted script will be accepted after review.
 
 ## Installation
 
@@ -24,7 +26,6 @@ To run Meraki script checks for a file, run:
 You will see output similar to the following:
 
 ![image](https://user-images.githubusercontent.com/5508707/149785418-49c981f2-060e-4dcd-a0d5-296e9e3a81ca.png)
-
 
 ### Checking for updates
 
