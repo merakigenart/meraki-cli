@@ -1,14 +1,14 @@
 import { Command } from 'commander';
 import { existsSync } from 'fs';
 import updateNotifier from 'update-notifier';
-import { runScriptChecks } from './commands/check';
 import pkg from '../package.json';
+import { runScriptChecks } from './commands/check';
 
 updateNotifier({ pkg }).notify();
 
 const program = new Command();
 
-program.version('1.1.0').name('meraki-cli');
+program.version(pkg.version).name('meraki-cli');
 
 program
     .command('update-check')
