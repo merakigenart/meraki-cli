@@ -1,4 +1,3 @@
-//const { Command } = require('commander');
 import { Command } from 'commander';
 import { existsSync } from 'fs';
 import updateNotifier from 'update-notifier';
