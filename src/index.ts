@@ -5,7 +5,7 @@ import { runScriptChecks } from './commands/check';
 
 const program = new Command();
 
-program.version('1.0.0').name('meraki-cli');
+program.version('1.1.0').name('meraki-cli');
 
 program
     .command('check <filename>')
