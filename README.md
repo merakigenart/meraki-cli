@@ -27,6 +27,16 @@ You will see output similar to the following:
 
 ![image](https://user-images.githubusercontent.com/5508707/149785418-49c981f2-060e-4dcd-a0d5-296e9e3a81ca.png)
 
+### Upload your work
+
+You may upload your scripts to your Meraki project via the `submit` command:
+
+```bash
+meraki-cli submit
+```
+
+You will be prompted for your project's identifier _(found on the project meta page)_ and your account API key _(found on your profile page)_.  Once you've entered this information once, it is saved and reused on future executions of `submit`.
+
 ### Checking for updates
 
 You may check for updates to `meraki-cli` by running:
