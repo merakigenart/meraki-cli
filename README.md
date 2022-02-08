@@ -37,6 +37,8 @@ meraki-cli submit
 
 You will be prompted for your project's identifier _(found on the project meta page)_ and your account API key _(found on your profile page)_.  Once you've entered this information once, it is saved and reused on future executions of `submit`.
 
+![image](https://user-images.githubusercontent.com/5508707/153089544-10143ce8-b369-4696-b4da-5b503801cef9.png)
+
 ### Checking for updates
 
 You may check for updates to `meraki-cli` by running:
