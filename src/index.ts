@@ -1,3 +1,4 @@
+import chalk from 'chalk';
 import { Command } from 'commander';
 import { existsSync, readFileSync } from 'fs';
 import updateNotifier from 'update-notifier';
@@ -53,7 +54,12 @@ program
         try {
             const config = createConf('meraki-cli');
 
-            const { token, projectId } = await getUserInputForSubmission(config);
+            const { token, projectId, confirmSubmit, confirmOverwrite } = await getUserInputForSubmission(config);
+
+            if (!confirmSubmit || !confirmOverwrite) {
+                process.stdout.write(`Cancelled submission, not uploading to Meraki.\n`);
+                return;
+            }
 
             if (!`${token}`.length || !`${projectId}`.length) {
                 process.stdout.write(`Please enter both a valid API Token and a valid Project ID.\n`);
@@ -63,12 +69,18 @@ program
             config.set('lastProjectId', projectId);
             config.set('lastToken', token);
 
+            process.stdout.write(`\n`);
+
+            process.stdout.write(`Uploading to Meraki...`);
+
             const result = await submitScriptViaApi(projectId, readFileSync(filenames[0]), readFileSync(filenames[1]), token);
 
             if (result.success) {
-                process.stdout.write(`Successfully submitted script to Meraki.\n`);
+                process.stdout.write(chalk.hex('#15803d')(`done.\n`));
+                process.stdout.write(`Project Dashboard: ${chalk.hex('$3b82f6')(result.url || '--')}\n`);
             } else {
-                process.stdout.write(`Error submitting script to Meraki.\n`);
+                process.stdout.write(chalk.hex('#b91c1c')(`failed.\n`));
+                process.stdout.write(`Error: ${chalk.hex('#c2410c')(result.message || 'Unknown error')}\n`);
             }
         } catch (error: any) {
             process.stdout.write(`Error: ${error.message}\n`);
