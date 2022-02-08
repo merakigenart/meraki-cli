@@ -47,7 +47,12 @@ program
         const filenames = [`${process.cwd()}/src/Script.js`, `${process.cwd()}/src/ScriptTraits.js`];
 
         if (!existsSync(filenames[0])) {
-            process.stdout.write(`File ${filenames[0]} does not exist.\n`);
+            process.stdout.write(`Error: '${filenames[0].replace(process.cwd(), '.')}' not found.\n`);
+            process.exit(1);
+        }
+
+        if (!existsSync(filenames[1])) {
+            process.stdout.write(`Error: '${filenames[1].replace(process.cwd(), '.')}' not found.\n`);
             process.exit(1);
         }
 
