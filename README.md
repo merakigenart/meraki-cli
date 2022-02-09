@@ -18,18 +18,31 @@ npm install meraki-cli --save-dev
 
 ## Usage
 
-To run Meraki script checks for a file, run:
+### Running Script Checks
+
+To run script checks for a file, run:
 
 ```bash
-./node_modules/.bin/meraki-cli check /path/to/my/Script.js
+meraki-cli check /path/to/my/Script.js
 ```
+
+or
+
+```bash
+meraki-cli check /path/to/my/ScriptTraits.js
+```
+
 You will see output similar to the following:
 
 ![image](https://user-images.githubusercontent.com/5508707/149785418-49c981f2-060e-4dcd-a0d5-296e9e3a81ca.png)
 
-### Upload your work
+Keep in mind that all script checks must pass before your code can be deployed to the Meraki testnet or mainnet, so it's important to check your work regularly.
 
-You may upload your scripts to your Meraki project via the `submit` command:
+> `check` only works on files named `Script.js` and `ScriptTraits.js`
+
+### Uploading your work
+
+You may upload your scripts to Meraki via the `submit` command:
 
 ```bash
 meraki-cli submit
