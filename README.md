@@ -18,6 +18,8 @@ npm install meraki-cli --save-dev
 
 ## Usage
 
+_Note: In several places, the script is referenced as `meraki-cli`, however in some cases you may have to use `./node_modules/.bin/meraki-cli` instead for the command to work correctly._
+
 ### Running Script Checks
 
 To run script checks for a file, run:
@@ -48,16 +50,25 @@ You may upload your scripts to Meraki via the `submit` command:
 meraki-cli submit
 ```
 
+![image](https://user-images.githubusercontent.com/5508707/153089544-10143ce8-b369-4696-b4da-5b503801cef9.png)
+
 You will be prompted for your project's identifier _(found on the project meta page)_ and your account API key _(found on your profile page)_.  Once you've entered this information once, it is saved and reused on future executions of `submit`.
 
-![image](https://user-images.githubusercontent.com/5508707/153089544-10143ce8-b369-4696-b4da-5b503801cef9.png)
+Finding the Project Identifier:
+
+![image](https://user-images.githubusercontent.com/5508707/153123394-6ad930d3-1230-4f75-83c9-4e1575828543.png)
+
+Finding your API Token on the Profile page:
+
+![image](https://user-images.githubusercontent.com/5508707/153123922-34a41322-7ba9-4994-a868-816fe682d738.png)
+
 
 ### Checking for updates
 
 You may check for updates to `meraki-cli` by running:
 
 ```bash
-./node_modules/.bin/meraki-cli update-check
+meraki-cli update-check
 ```
 
 _Note: update checks are automatically run on a regular basis as well._
@@ -68,8 +79,9 @@ _Note: update checks are automatically run on a regular basis as well._
 
 ```bash
 npm install
+npm run build:dev
 
-npm run dev
+bin/meraki-cli --help
 ```
 
 ### Testing
