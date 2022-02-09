@@ -4,6 +4,11 @@ All notable changes to `meraki-cli` will be documented in this file.
 
 ---
 
+## 1.2.0 - 2022-Feb-08
+
+- Add `submit` command
+- documentation updates
+
 ## 1.1.0 - 2022-Feb-07
 
 - add warning and error checks for p5.js scripts
