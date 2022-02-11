@@ -4,6 +4,7 @@ import updateNotifier from 'update-notifier';
 import pkg from '../package.json';
 import { runScriptChecks } from './commands/check';
 import { submitActionHandler } from './commands/submit';
+import { downloadActionHandler } from './commands/download';
 
 updateNotifier({ pkg }).notify();
 
@@ -38,6 +39,10 @@ program
         runScriptChecks(filename);
     });
 
-program.command('submit').description('Upload your scripts to Meraki').action(submitActionHandler);
+program.command('submit').description('Upload your scripts to Meraki')
+    .action(submitActionHandler);
+
+program.command('download').description('Download your scripts from Meraki')
+    .action(downloadActionHandler);
 
 program.parse(process.argv);
