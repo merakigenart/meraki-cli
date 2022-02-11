@@ -4,6 +4,11 @@ All notable changes to `meraki-cli` will be documented in this file.
 
 ---
 
+## 1.3.0 - 2022-Feb-11
+
+- add `download` command
+- documentation updates
+
 ## 1.2.0 - 2022-Feb-08
 
 - Add `submit` command

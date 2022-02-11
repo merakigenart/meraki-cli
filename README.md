@@ -42,6 +42,23 @@ Keep in mind that all script checks must pass before your code can be deployed t
 
 > `check` only works on files named `Script.js` and `ScriptTraits.js`
 
+### Downloading your work
+
+You may download a zip archive of your scripts from Meraki using the `download` command:
+
+```bash
+meraki-cli download
+```
+
+Finding the Project Identifier:
+
+![image](https://user-images.githubusercontent.com/5508707/153123394-6ad930d3-1230-4f75-83c9-4e1575828543.png)
+
+Finding your API Token on the Profile page:
+
+![image](https://user-images.githubusercontent.com/5508707/153123922-34a41322-7ba9-4994-a868-816fe682d738.png)
+
+
 ### Uploading your work
 
 You may upload your scripts to Meraki via the `submit` command:
