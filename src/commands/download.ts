@@ -59,8 +59,8 @@ async function downloadArchive(projectId: string, token: string) {
 
     try {
         response = await axios.get(url, { headers: { 'x-meraki-token': token }, responseType: 'stream' });
-    } catch (error) {
-        console.log(error);
+    } catch (error: any) {
+        console.log(error.message);
     }
 
     response.data.pipe(writer);
