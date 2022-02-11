@@ -49,15 +49,7 @@ You may download a zip archive of your scripts from Meraki using the `download` 
 ```bash
 meraki-cli download
 ```
-
-Finding the Project Identifier:
-
-![image](https://user-images.githubusercontent.com/5508707/153123394-6ad930d3-1230-4f75-83c9-4e1575828543.png)
-
-Finding your API Token on the Profile page:
-
-![image](https://user-images.githubusercontent.com/5508707/153123922-34a41322-7ba9-4994-a868-816fe682d738.png)
-
+![image](https://user-images.githubusercontent.com/5508707/153680656-8daf377a-50ac-4c6a-872e-f5b7e8a181b6.png)
 
 ### Uploading your work
 
@@ -71,11 +63,14 @@ meraki-cli submit
 
 You will be prompted for your project's identifier _(found on the project meta page)_ and your account API key _(found on your profile page)_.  Once you've entered this information once, it is saved and reused on future executions of `submit`.
 
-Finding the Project Identifier:
+
+### Help with Uploading & Downloading
+
+To find your Project Identifier:
 
 ![image](https://user-images.githubusercontent.com/5508707/153123394-6ad930d3-1230-4f75-83c9-4e1575828543.png)
 
-Finding your API Token on the Profile page:
+To find your API Token _(located on the Profile page)_:
 
 ![image](https://user-images.githubusercontent.com/5508707/153123922-34a41322-7ba9-4994-a868-816fe682d738.png)
 
