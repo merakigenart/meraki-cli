@@ -39,10 +39,8 @@ program
         runScriptChecks(filename);
     });
 
-program.command('submit').description('Upload your scripts to Meraki')
-    .action(submitActionHandler);
+program.command('submit').description('Upload your scripts to Meraki').action(submitActionHandler);
 
-program.command('download').description('Download your scripts from Meraki')
-    .action(downloadActionHandler);
+program.command('download').description('Download your scripts from Meraki').action(downloadActionHandler);
 
 program.parse(process.argv);
